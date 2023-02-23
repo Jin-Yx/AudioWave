@@ -6,6 +6,8 @@
 #### 1、导入依赖
 
 ~~~groovy
+maven { url "https://jitpack.io" }
+        
 implementation 'com.github.Jin-Yx:AudioWave:1.23.0223'
 ~~~
 
