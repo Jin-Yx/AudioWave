@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="WaveView">
+        <!-- 波形颜色. -->
+        <attr name="waveColor" format="color" />
+        <!-- 一个屏幕宽度绘制的波形数量，默认 640 条 -->
+        <attr name="waveCount" format="integer" />
+        <!-- 是否自动根据波形的峰值大小动态缩放波形，默认 false -->
+        <attr name="waveAutoScale" format="boolean" />
+        <!-- 当 waveAutoScale 为 false 时，则表示固定缩放比，因此默认最大值为 2个字节一个采样点的最大值 Short.MAX_VALUE -->
+        <attr name="waveMaxScale" format="integer" />
+    </declare-styleable>
+</resources>
