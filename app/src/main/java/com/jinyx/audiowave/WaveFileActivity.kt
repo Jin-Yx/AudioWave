@@ -34,7 +34,8 @@ class WaveFileActivity : AppCompatActivity() {
                 var len: Int
                 while ((inputStream.read(buffer).also { len = it }) != -1) {
                     if (len == bufferStep) {
-                        feedAudio2WaveView(buffer)
+                        // feed 的 数据，此处需要 copy 出来；避免线程调度，未绘制的时候；read 下一帧数据造成 buffer 中的内容改变，导致绘制错乱
+                        feedAudio2WaveView(buffer.copyOfRange(0, buffer.size))
                     } else if (len > 0) {
                         feedAudio2WaveView(buffer.copyOfRange(0, len))
                     }
