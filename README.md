@@ -7,8 +7,10 @@
 
 ~~~groovy
 maven { url "https://jitpack.io" }
-        
-implementation 'com.github.Jin-Yx:AudioWave:1.23.0223'
+
+
+// 替换成最后的 release 版本号
+implementation 'com.github.Jin-Yx:AudioWave:last_release_version'
 ~~~
 
 
